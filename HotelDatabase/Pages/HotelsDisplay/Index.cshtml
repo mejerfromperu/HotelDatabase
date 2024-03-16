@@ -1,0 +1,42 @@
+﻿@page
+@using HotelDatabase.Model
+@model HotelDatabase.Pages.HotelsDisplay.IndexModel
+@{
+}
+<div class="container">
+    <div class="col">
+        <div class="row">
+            <h1 class="jumbotron">Hoteller</h1>
+            
+            <p>&nbsp;</p>
+            <div class="col-6">
+                <div class="row">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Hotel Nummer</th>
+                                <th>Hotel Navn</th>
+                                <th>Hotel Address</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Hotel m in Model.Hotels)
+                            {
+                                <tr class="@Model.Hotels)">
+                                    <td>@m.Hotel_no</td>
+                                    <td><strong>@m.Name</strong></td>
+                                    <td>@m.Address</td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p>&nbsp;</p>
+
+        </div>
+    </div>
+</div>

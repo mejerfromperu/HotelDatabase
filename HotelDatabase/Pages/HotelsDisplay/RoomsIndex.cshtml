@@ -1,0 +1,44 @@
+﻿@page
+@using HotelDatabase.Model
+@model HotelDatabase.Pages.HotelsDisplay.RoomsIndexModel
+@{
+}
+
+<div class="container">
+    <div class="col">
+        <div class="row">
+            <h1 class="jumbotron">Rooms</h1>
+            <h2>The Average price of a room =</h2>
+            <h2>@Model.averagepPrice</h2>
+            <p>&nbsp;</p>
+            <div class="col-6">
+                <div class="row">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Room Nummer</th>
+                                <th>Hotel Nummer</th>
+                                <th>Room  price</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Room m in Model.Rooms)
+                            {
+                                <tr class="@Model.Rooms)">
+                                    <td>@m.Room_No</td>
+                                    <td><strong>@m.Hotel_No</strong></td>
+                                    <td>@m.Price</td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p>&nbsp;</p>
+
+        </div>
+    </div>
+</div>
